@@ -18,6 +18,15 @@
     <%= form.text_field :title %>
   </p>
 
+  <% if @product.image? %>
+    <%= image_tag @product.image.thumb.url %>
+      <div>
+        <%= label_tag :remove_image do %>
+          Remove image
+          <%= form.check_box :remove_image %>
+        <% end %>
+      </div>
+  <% end %>
   <p>
     <%= form.label :image %><br>
     <%= form.file_field :image %>

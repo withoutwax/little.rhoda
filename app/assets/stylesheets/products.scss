@@ -1,3 +1,49 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+  // justify-content: center;
+  // justify-items: center;
+
+  border: 1px solid red;
+  margin-left:5%;
+  margin-right:5%;
+  // width: 80%
+
+  img {
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+  }
+
+  article:nth-child(odd) {
+    justify-self: end;
+
+    border: 1px solid red;
+  }
+}
+
+// @media only screen and (max-width: 600px) {
+//   .product-container {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     // grid-gap: 10px;
+//     grid-auto-rows: minmax(600px, auto);
+//     // justify-content: center;
+//     justify-items: center;
+//
+//     border: 1px solid red;
+//     margin: auto;
+//     // width: 80%
+//   }
+// }

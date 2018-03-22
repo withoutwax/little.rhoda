@@ -3,6 +3,8 @@
   <%= @product.title %>
 </p>
 
+<%= image_tag(@product.image.url, alt: 'Image') if @product.image? %>
+
 <p>
   <strong>Description:</strong>
   <%= @product.description %>

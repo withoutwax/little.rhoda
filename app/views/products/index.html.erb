@@ -1,9 +1,11 @@
 <h1>Listing Products</h1>
 
-<section class="product-container">
+<section class="product-container-home">
   <% @products.each do |product| %>
     <article>
-      <%= image_tag(product.image.display.url, alt: 'Image') if product.image? %>
+      <%= link_to(product) do %>
+        <%= image_tag(product.image.display.url, alt: 'Image') if product.image? %>
+      <% end %>
     </article>
   <% end %>
 </section>

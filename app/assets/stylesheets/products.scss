@@ -6,7 +6,7 @@ h1 {
   text-align: center;
 }
 
-.product-container {
+.product-container-home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -47,3 +47,21 @@ h1 {
 //     // width: 80%
 //   }
 // }
+
+// Product Detail Page
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+
+  border: 1px solid red;
+
+  .product-container-left-article {
+    margin-left: 20%;
+    margin-right: 5%;
+
+    border: 1px solid green;
+  }
+}

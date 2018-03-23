@@ -1,19 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<%= link_to 'Go back', products_path %>
+<section class="product-container">
+  <article class="product-container-left-article">
+    <h2>
+      <%= @product.title %>
+    </h2>
+    <p class="product-price">
+      <%= @product.price %>
+    </p>
+    <p class="product-description">
+      <%= @product.description %>
+    </p>
+    <p>Quantity</p>
+    <button>Add to Cart</button>
+  </article>
 
-<%= image_tag(@product.image.thumb.url, alt: 'Image') if @product.image? %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <%= image_tag(@product.image.display.url, alt: 'Image') if @product.image? %>
+  <!-- Share with SNS -->
+</section>
 
 <%= link_to 'Edit', edit_product_path %>
-<%= link_to 'Go back', products_path %>

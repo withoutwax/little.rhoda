@@ -12,6 +12,11 @@
     </p>
     <p>Quantity</p>
     <button>Add to Cart</button>
+
+    <%= form_tag do %>
+      <%= text_field_tag :test, value: session[:value] %>
+    <% end %>
+    
   </article>
 
   <%= image_tag(@product.image.display.url, alt: 'Image') if @product.image? %>

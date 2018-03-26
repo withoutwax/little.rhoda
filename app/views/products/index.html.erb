@@ -5,6 +5,15 @@
     <article>
       <%= link_to(product) do %>
         <%= image_tag(product.image.display.url, alt: 'Image') if product.image? %>
+        <!-- <h2 class="img__description">Hello World</h2> -->
+        <div class="img__description">
+          <%= product.title %>
+          <br/>
+          <%= product.price %>
+        </div>
+
+        <!-- <div class="product-container-image-description">
+        </div> -->
       <% end %>
     </article>
   <% end %>

@@ -2,8 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$pink01: #e5bee1;
+$rhoda-font-bodoni: 'Playfair Display', serif;
+
+$test-border: 1px solid red;
+
 h1 {
   text-align: center;
+  font-family: $rhoda-font-bodoni;
 }
 
 .product-container-home {
@@ -14,22 +20,49 @@ h1 {
   // justify-content: center;
   // justify-items: center;
 
-  border: 1px solid red;
+  // border: $test-border;
   margin-left:5%;
   margin-right:5%;
   // width: 80%
 
-  img {
-    max-width: 600px;
-    max-height: 600px;
-    width: 100%;
-    height: auto;
+  article {
+    position: relative;
+
+    img {
+      max-width: 600px;
+      max-height: 600px;
+      width: 100%;
+      height: auto;
+
+      transition: opacity .5s ease-in-out;
+    }
+
+    .img__description {
+      position: absolute;
+      text-align: center;
+      opacity: 0;
+      top: 40%;
+      right: 40%;
+      // text-align: center;
+      transition: .5s ease-in-out;
+      transform: translateY(.5em);
+
+      font-family: $rhoda-font-bodoni;
+    }
+  }
+
+  article:hover img {
+    opacity: 0;
+  }
+  article:hover .img__description {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   article:nth-child(odd) {
     justify-self: end;
 
-    border: 1px solid red;
+    // border: $test-border;
   }
 }
 

@@ -13,12 +13,29 @@
  *= require_tree .
  *= require_self
  */
+$pink01: #e5bee1;
+$rhoda-font-bodoni: 'Playfair Display', serif;
+
 header {
   display: flex;
   justify-content: flex-end;
+  height: 200px;
+  font-family: $rhoda-font-bodoni;
 
-}
+  #home {
+    margin: auto;
+    font-weight: bold;
+  }
+  a {
+    align-self: flex-end;
 
-header > #home {
-  margin: auto;
+    font-style: italic;
+    text-decoration: none
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $pink01;
+  }
 }
